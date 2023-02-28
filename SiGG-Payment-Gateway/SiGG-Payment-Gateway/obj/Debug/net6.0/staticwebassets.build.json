@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XeYDuZ3kwGyHnZFnKfKghU90ODc7YOSU96+vhsyxxqg=",
+  "Source": "SiGG-Payment-Gateway",
+  "BasePath": "_content/SiGG-Payment-Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

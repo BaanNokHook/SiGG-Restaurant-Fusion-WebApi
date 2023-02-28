@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\SiGG-RestF-BackEND-Webapi.props" />
-</Project>
