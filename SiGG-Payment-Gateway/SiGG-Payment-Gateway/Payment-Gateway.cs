@@ -1,5 +1,12 @@
 namespace SiGG_Payment_Gateway
 {
+    public class Auth
+    {
+        public DateTime expiration { get; set; }
+
+        public string token { get; set; }
+    }
+
     public class PaymentGateway
     {
         public DateTime Date { get; set; }
@@ -10,4 +17,5 @@ namespace SiGG_Payment_Gateway
 
         public string? Summary { get; set; }
     }
+
 }

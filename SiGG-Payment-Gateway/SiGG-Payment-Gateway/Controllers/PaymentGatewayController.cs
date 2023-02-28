@@ -18,6 +18,18 @@ namespace SiGG_Payment_Gateway.Controllers
             _logger = logger;
         }
 
+        [HttpPost(Name = "PostPaymentGateway")]
+        public IEnumerable<PaymentGateway> Post()
+        {
+            return Enumerable.Range(1, 5).Select(index => new PaymentGateway
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+
         [HttpGet(Name = "GetPaymentGateway")]
         public IEnumerable<PaymentGateway> Get(int id, int amountId)
         {
@@ -30,19 +42,7 @@ namespace SiGG_Payment_Gateway.Controllers
             .ToArray();
         }
 
-        [HttpPost(Name = "PostTest")]
-        public IEnumerable<PaymentGateway> Post(int id, int amountId)
-        {
-            return Enumerable.Range(1, 5).Select(index => new PaymentGateway
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
-
-        [HttpDelete(Name = "DeleteTest")]
+        [HttpDelete(Name = "DeletePaymentGateway")]
         public IEnumerable<PaymentGateway> Delete(int id, int amountId)
         {
             return Enumerable.Range(1, 5).Select(index => new PaymentGateway
